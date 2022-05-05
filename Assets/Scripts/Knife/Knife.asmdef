@@ -1,0 +1,16 @@
+{
+    "name": "Knife",
+    "rootNamespace": "",
+    "references": [
+        "GUID:62aa63d188e6a9b4aa42827fd91cee29"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
