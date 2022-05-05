@@ -1,4 +1,6 @@
+using Plugins.Vibration;
 using UnityEngine;
+
 
 namespace Core
 {

@@ -1,35 +1,36 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+namespace Core
 {
-    public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
-    public int amountToPool;
-
-    private void Start()
+    public class ObjectPool : MonoBehaviour
     {
-        pooledObjects = new List<GameObject>();
-        for (int i = 0; i < amountToPool; i++)
-        {
-            var tmp = Instantiate(objectToPool);
-            tmp.SetActive(false);
-            pooledObjects.Add(tmp);
-        }
-    }
+        public GameObject objectToPool;
+        public int amountToPool;
+        private List<GameObject> _pooledObjects;
 
-    public GameObject GetPooledObject()
-    {
-        for (int i = 0; i < amountToPool; i++)
+        private void Start()
         {
-            if (!pooledObjects[i].activeInHierarchy)
+            _pooledObjects = new List<GameObject>();
+            for (int i = 0; i < amountToPool; i++)
             {
-                return pooledObjects[i];
+                var tmp = Instantiate(objectToPool);
+                tmp.SetActive(false);
+                _pooledObjects.Add(tmp);
             }
         }
 
-        return null;
+        public GameObject GetPooledObject()
+        {
+            for (int i = 0; i < amountToPool; i++)
+            {
+                if (!_pooledObjects[i].activeInHierarchy)
+                {
+                    return _pooledObjects[i];
+                }
+            }
+
+            return null;
+        }
     }
 }

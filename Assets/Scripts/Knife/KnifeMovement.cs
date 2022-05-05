@@ -7,7 +7,7 @@ namespace Knife
     {
         [SerializeField] private float force;
         private readonly Vector2 _direction = new Vector2(0, 1);
-        private bool _hasCollided;
+        private bool _hasThrow;
         private Rigidbody2D _rigidbody;
         private GameManager _gameManager;
 
@@ -21,11 +21,15 @@ namespace Knife
         {
             if (!Input.GetMouseButtonDown(0)) return;
             if (!_gameManager.HasStarted) return;
-            if (_hasCollided) return;
+            if (_hasThrow) return;
             Throw();
         }
 
-        private void Throw() => _rigidbody.AddForce(_direction * force, ForceMode2D.Impulse);
+        private void Throw()
+        {
+            _rigidbody.AddForce(_direction * force, ForceMode2D.Impulse);
+            _hasThrow = true;
+        }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
@@ -34,7 +38,6 @@ namespace Knife
             _rigidbody.angularVelocity = 0;
             _rigidbody.isKinematic = true;
             transform.parent = other.transform;
-            _hasCollided = true;
         }
     }
 }

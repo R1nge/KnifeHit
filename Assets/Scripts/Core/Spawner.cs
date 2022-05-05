@@ -7,6 +7,8 @@ namespace Core
         [SerializeField] private GameObject target;
         private GameManager _gameManager;
         private ObjectPool _pool;
+        private readonly Vector3 _targetSpawnPosition = new Vector3(0, 3, 0);
+        private readonly Vector3 _knifeSpawnPosition = new Vector3(0, -3, 0);
 
         private void Awake()
         {
@@ -15,22 +17,20 @@ namespace Core
             _pool = FindObjectOfType<ObjectPool>();
         }
 
-        private void OnGameStarted() => Instantiate(target, new Vector3(0, 3, 0), Quaternion.identity);
+        private void OnGameStarted() => Instantiate(target, _targetSpawnPosition, Quaternion.identity);
 
         public void SpawnKnife()
         {
             var knifeInstance = _pool.GetPooledObject();
             if (knifeInstance != null)
             {
-                knifeInstance.transform.position = new Vector3(0, -3, 0);
+                knifeInstance.transform.position = _knifeSpawnPosition;
                 knifeInstance.SetActive(true);
             }
             else
             {
-                print("win");
+                _gameManager.Win();
             }
-
-            //Instantiate(knife, new Vector3(0, -3, 0), knife.transform.rotation);
         }
     }
 }

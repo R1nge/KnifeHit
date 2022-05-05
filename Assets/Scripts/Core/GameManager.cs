@@ -7,6 +7,7 @@ namespace Core
     public class GameManager : MonoBehaviour
     {
         public event Action OnGameStartedEvent;
+        public event Action OnWinEvent;
         public event Action OnGameOverEvent;
         public bool HasStarted { get; private set; }
 
@@ -17,6 +18,13 @@ namespace Core
             OnGameStartedEvent?.Invoke();
             HasStarted = true;
             SetTimeScale(1);
+        }
+
+        public void Win()
+        {
+            OnWinEvent?.Invoke();
+            HasStarted = true;
+            SetTimeScale(0);
         }
 
         public void GameOver()
