@@ -8,5 +8,11 @@ namespace Skins
         [SerializeField] private Skin skin;
 
         private void Start() => spriteRenderer.sprite = skin.sprite;
+
+        public void ChangeSkin(Sprite sprite)
+        {
+            skin.ChangeSkin(sprite);
+            spriteRenderer.sprite = skin.sprite;
+        }
     }
 }
