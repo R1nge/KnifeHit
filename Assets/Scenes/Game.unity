@@ -206,13 +206,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054705961}
+      - m_Target: {fileID: 941409421}
         m_TargetAssemblyTypeName: Skins.SkinManager, Skins
         m_MethodName: ChangeSkin
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 10f9e59e251d2f74084b790262fb2a11, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: f064f1e60c4167e41827d3e0e5ca933c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Skins.Skin, Skins
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 166705793}
   - component: {fileID: 166705794}
   - component: {fileID: 166705795}
+  - component: {fileID: 166705796}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -468,6 +469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 559211940855532213, guid: e3c6af021a7d4474ab3108a0e439afc4, type: 3}
+  apple: {fileID: 1305299333709802142, guid: ce009f226bfdca04582dc9c480554974, type: 3}
+  knife: {fileID: 6901119673262146454, guid: 86dd6415366adda499d93142366efa5d, type: 3}
 --- !u!114 &166705795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,8 +483,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12682a6593aef3148bcd5556dce211d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPool: {fileID: 6901119673262146454, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+  objectToPool: {fileID: 941409418}
   amountToPool: 9
+--- !u!114 &166705796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166705790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5fc9b932919ed4290ad78a7c0d59ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 100
 --- !u!1 &444603765
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,13 +900,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054705961}
+      - m_Target: {fileID: 941409421}
         m_TargetAssemblyTypeName: Skins.SkinManager, Skins
         m_MethodName: ChangeSkin
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 367055dc629f2d54ba48207244db2781, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 10314f622631b5542ad6a2765549560f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Skins.Skin, Skins
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1203,6 +1219,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928957068}
   m_CullTransparentMesh: 1
+--- !u!1001 &941409417
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901119673262146454, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+      propertyPath: m_Name
+      value: Knife
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+--- !u!1 &941409418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6901119673262146454, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+  m_PrefabInstance: {fileID: 941409417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &941409421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 308037522591407274, guid: 86dd6415366adda499d93142366efa5d, type: 3}
+  m_PrefabInstance: {fileID: 941409417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941409418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768e215ccc467264db0b073c22faff4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &971740740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,17 +1494,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039748548}
   m_CullTransparentMesh: 1
---- !u!114 &1054705961 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 308037522591407274, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-  m_PrefabInstance: {fileID: 6901119671915949283}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768e215ccc467264db0b073c22faff4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1151691077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,13 +1577,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054705961}
+      - m_Target: {fileID: 941409421}
         m_TargetAssemblyTypeName: Skins.SkinManager, Skins
         m_MethodName: ChangeSkin
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: d4d1baa7b54788b47af9270db0eee565, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 8dd3a9b678ea77a4390fc9921a999cf9, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Skins.Skin, Skins
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1972,13 +2050,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054705961}
+      - m_Target: {fileID: 941409421}
         m_TargetAssemblyTypeName: Skins.SkinManager, Skins
         m_MethodName: ChangeSkin
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 34b40765ac54b364a9b08186072eaf1a, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 35ff3398df27e6749b2d5f730e8a9c93, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Skins.Skin, Skins
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2212,13 +2290,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054705961}
+      - m_Target: {fileID: 941409421}
         m_TargetAssemblyTypeName: Skins.SkinManager, Skins
         m_MethodName: ChangeSkin
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 30446aeaab6f76444bf9074577bc9a7f, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 23302f1ce736526428b02fa15500eb18, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Skins.Skin, Skins
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2582,13 +2660,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1054705961}
+      - m_Target: {fileID: 941409421}
         m_TargetAssemblyTypeName: Skins.SkinManager, Skins
         m_MethodName: ChangeSkin
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 67cf1cfe4ad60e942b2bc72fc182ee94, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: bda62714028ad8e4fb5629ded56748e0, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Skins.Skin, Skins
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3117,7 +3195,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999227572
 GameObject:
@@ -3219,60 +3297,3 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1001 &6901119671915949283
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146452, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901119673262146454, guid: 86dd6415366adda499d93142366efa5d, type: 3}
-      propertyPath: m_Name
-      value: Knife
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 86dd6415366adda499d93142366efa5d, type: 3}

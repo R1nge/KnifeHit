@@ -4,7 +4,7 @@ namespace Core
 {
     public class Spawner : MonoBehaviour
     {
-        [SerializeField] private GameObject target;
+        [SerializeField] private GameObject target, apple, knife;
         private GameManager _gameManager;
         private ObjectPool _pool;
         private readonly Vector3 _targetSpawnPosition = new Vector3(0, 3, 0);
@@ -17,7 +17,10 @@ namespace Core
             _pool = FindObjectOfType<ObjectPool>();
         }
 
-        private void OnGameStarted() => Instantiate(target, _targetSpawnPosition, Quaternion.identity);
+        private void OnGameStarted()
+        {
+            Instantiate(target, _targetSpawnPosition, Quaternion.identity);
+        }
 
         public void SpawnKnife()
         {
@@ -31,6 +34,14 @@ namespace Core
             {
                 _gameManager.Win();
             }
+        }
+
+        private void SpawnKnifeTarget(Transform origin)
+        {
+        }
+
+        private void SpawnAppleTarget(Transform origin)
+        {
         }
     }
 }

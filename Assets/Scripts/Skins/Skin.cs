@@ -6,10 +6,7 @@ namespace Skins
     public class Skin : ScriptableObject
     {
         public Sprite sprite;
-
-        public void ChangeSkin(Sprite sprite)
-        {
-            this.sprite = sprite;
-        }
+        public int price;
+        public bool isUnlocked;
     }
 }

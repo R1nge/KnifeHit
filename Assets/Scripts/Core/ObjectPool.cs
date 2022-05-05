@@ -5,11 +5,18 @@ namespace Core
 {
     public class ObjectPool : MonoBehaviour
     {
+        private List<GameObject> _pooledObjects;
         public GameObject objectToPool;
         public int amountToPool;
-        private List<GameObject> _pooledObjects;
+        private GameManager _gameManager;
 
-        private void Start()
+        private void Awake()
+        {
+            _gameManager = FindObjectOfType<GameManager>();
+            _gameManager.OnGameStartedEvent += OnGameStarted;
+        }
+
+        private void OnGameStarted()
         {
             _pooledObjects = new List<GameObject>();
             for (int i = 0; i < amountToPool; i++)
