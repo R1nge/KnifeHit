@@ -1,5 +1,3 @@
-using System;
-using System.ComponentModel.Design;
 using UnityEngine;
 
 namespace Core
@@ -13,6 +11,7 @@ namespace Core
 
         public bool Spend(int amount)
         {
+            if (amount <= 0) return false;
             if (money - amount < 0) return false;
             money -= amount;
             Save();
@@ -21,9 +20,7 @@ namespace Core
 
         public void Earn(int amount)
         {
-            if (amount < 0)
-                throw CheckoutException.Canceled;
-
+            if (amount < 0) return;
             money += amount;
             Save();
         }

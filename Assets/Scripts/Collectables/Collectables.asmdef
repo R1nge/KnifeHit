@@ -1,15 +1,10 @@
 {
-    "name": "Knife",
+    "name": "Collectables",
     "rootNamespace": "",
     "references": [
-        "GUID:62aa63d188e6a9b4aa42827fd91cee29",
-        "GUID:22288c5ce597a1f438fe11a6f6d94c94"
+        "GUID:62aa63d188e6a9b4aa42827fd91cee29"
     ],
-    "includePlatforms": [
-        "Android",
-        "Editor",
-        "iOS"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
