@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Knife
 {
-    public class KnifeBase : MonoBehaviour
+    public class Knife : MonoBehaviour
     {
         private Spawner _spawner;
         private GameManager _gameManager;
@@ -29,7 +29,7 @@ namespace Knife
                 return;
             }
 
-            if (other.transform.CompareTag("Target")) 
+            if (other.transform.CompareTag("Target"))
                 _spawner.SpawnKnife();
         }
     }
