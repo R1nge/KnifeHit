@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Core
@@ -7,6 +8,8 @@ namespace Core
         [SerializeField] private int money;
         private const string MONEY = "Money";
 
+        public event Action<int> OnMoneyAmountChanged;
+
         private void Start() => Load();
 
         public bool Spend(int amount)
@@ -14,6 +17,7 @@ namespace Core
             if (amount <= 0) return false;
             if (money - amount < 0) return false;
             money -= amount;
+            OnMoneyAmountChanged?.Invoke(money);
             Save();
             return true;
         }
@@ -22,6 +26,7 @@ namespace Core
         {
             if (amount < 0) return;
             money += amount;
+            OnMoneyAmountChanged?.Invoke(money);
             Save();
         }
 
@@ -31,6 +36,10 @@ namespace Core
             PlayerPrefs.Save();
         }
 
-        private void Load() => money = PlayerPrefs.GetInt(MONEY, 0);
+        private void Load()
+        {
+            money = PlayerPrefs.GetInt(MONEY, 0);
+            OnMoneyAmountChanged?.Invoke(money);
+        }
     }
 }

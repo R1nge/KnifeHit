@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 namespace Core
@@ -5,7 +6,9 @@ namespace Core
     public class UIHandler : MonoBehaviour
     {
         [SerializeField] private Canvas mainMenu, skins, inGameMenu, winMenu, gameOverMenu;
+        [SerializeField] private TextMeshProUGUI moneyText;
         private GameManager _gameManager;
+        private Wallet _wallet;
 
         private void Awake()
         {
@@ -13,6 +16,8 @@ namespace Core
             _gameManager.OnGameStartedEvent += OnGameStarted;
             _gameManager.OnWinEvent += OnWin;
             _gameManager.OnGameOverEvent += OnGameOver;
+            _wallet = FindObjectOfType<Wallet>();
+            _wallet.OnMoneyAmountChanged += UpdateMoneyAmount;
         }
 
         private void Start()
@@ -67,6 +72,11 @@ namespace Core
             inGameMenu.gameObject.SetActive(false);
             winMenu.gameObject.SetActive(false);
             gameOverMenu.gameObject.SetActive(false);
+        }
+
+        private void UpdateMoneyAmount(int amount)
+        {
+            moneyText.text = amount.ToString();
         }
     }
 }
